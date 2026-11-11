@@ -1,0 +1,22 @@
+Title	URL	Status	Prioridad	Puntos	Sprint	Inicio	Terminado
+E01 — Gestión integral de reservaciones y agenda	https://github.com/RobertoDanRam/apartalo-barberia/issues/15	Historias	Won't				
+E02 — Evolución del programa de fidelidad y anticipos	https://github.com/RobertoDanRam/apartalo-barberia/issues/16	Historias	Won't				
+H01 - Consultar servicios y precios	https://github.com/RobertoDanRam/apartalo-barberia/issues/1	Historias	Should	2			
+H02 — Calcular precio combinado (R1)	https://github.com/RobertoDanRam/apartalo-barberia/issues/2	Liberación	Must	3	Sprint 1	Nov 11, 2026	Nov 11, 2026
+H03 — Aplicar descuento frecuente (R1)	https://github.com/RobertoDanRam/apartalo-barberia/issues/3	Liberación	Must	3	Sprint 1	Nov 11, 2026	Nov 11, 2026
+H04 — Consultar desglose del total	https://github.com/RobertoDanRam/apartalo-barberia/issues/4	Historias	Should	3			
+H05 — Calcular cargo de cancelación (R2)	https://github.com/RobertoDanRam/apartalo-barberia/issues/5	Liberación	Must	5	Sprint 1	Nov 11, 2026	Nov 11, 2026
+H06 — Registrar inasistencias (R2)	https://github.com/RobertoDanRam/apartalo-barberia/issues/6	Desarrollo	Must	3	Sprint 1	Nov 11, 2026	
+H07A — Seleccionar servicio y horario.	https://github.com/RobertoDanRam/apartalo-barberia/issues/17	Historias	Must	5			
+H07B — Validar y registrar una cita	https://github.com/RobertoDanRam/apartalo-barberia/issues/18	Historias	Must	8			
+H08 — Consultar agenda diaria	https://github.com/RobertoDanRam/apartalo-barberia/issues/8	Historias	Should	5			
+H09 — Limitar citas por cliente (R3)	https://github.com/RobertoDanRam/apartalo-barberia/issues/9	Historias	Must	5			
+H10 — Limitar citas por horario (R3)	https://github.com/RobertoDanRam/apartalo-barberia/issues/10	Historias	Must	5			
+H11 — Exportar agenda diaria	https://github.com/RobertoDanRam/apartalo-barberia/issues/11	Historias	Could	8			
+H12 — Consultar política de cancelaciones	https://github.com/RobertoDanRam/apartalo-barberia/issues/12	Historias	Should	2			
+H13 — Recibir confirmación de reservación	https://github.com/RobertoDanRam/apartalo-barberia/issues/13	Historias	Should	3			
+H14 — Consultar citas asignadas	https://github.com/RobertoDanRam/apartalo-barberia/issues/14	Historias	Could	5			
+H15 — Generar comprobante de cancelación (R2)	https://github.com/RobertoDanRam/apartalo-barberia/issues/19	Historias	Could		Sprint 2		
+RNF01 — Desempeño de consultas durante hora pico	https://github.com/RobertoDanRam/apartalo-barberia/issues/20	Historias	Should		Sprint 2		
+RNF02 — Robustez ante entradas inválidas	https://github.com/RobertoDanRam/apartalo-barberia/issues/21	Liberación	Must		Sprint 1	Nov 11, 2026	Nov 11, 2026
+RNF03 — Cobertura de salidas de la regla R2	https://github.com/RobertoDanRam/apartalo-barberia/issues/22	Historias	Should		Sprint 2		
