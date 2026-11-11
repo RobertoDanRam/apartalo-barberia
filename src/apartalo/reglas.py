@@ -1,9 +1,18 @@
-"""Reglas de negocio de mi variante (Ejercicio 6).
+def calcular_total(servicio: str, visitas_mes: int = 0) -> int:
+    if servicio not in ("corte", "barba", "ambos"):
+        raise ValueError("Servicio no válido")
 
-Aquí van las funciones de R1 y R2. Escríbelas con TDD:
-primero una prueba que falle (ROJO), luego el código mínimo para que pase (VERDE),
-y después mejora el código sin romper las pruebas (REFACTOR).
+    if (
+        not isinstance(visitas_mes, int)
+        or isinstance(visitas_mes, bool)
+        or visitas_mes < 0
+    ):
+        raise ValueError("Las visitas deben ser un entero no negativo")
 
-Si una entrada no tiene sentido (horas negativas, un servicio que no existe, etc.),
-la función debe lanzar ValueError.
-"""
+    if servicio == "ambos":
+        return round((180 + 120) * 0.85)
+
+    if servicio == "corte":
+        return 180
+
+    return 120
