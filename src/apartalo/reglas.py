@@ -10,9 +10,13 @@ def calcular_total(servicio: str, visitas_mes: int = 0) -> int:
         raise ValueError("Las visitas deben ser un entero no negativo")
 
     if servicio == "ambos":
-        return round((180 + 120) * 0.85)
+        precio = round((180 + 120) * 0.85)
+    elif servicio == "corte":
+        precio = 180
+    else:
+        precio = 120
 
-    if servicio == "corte":
-        return 180
+    if visitas_mes >= 5:
+        return precio - 20
 
-    return 120
+    return precio
