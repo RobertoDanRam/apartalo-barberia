@@ -128,7 +128,7 @@ Durante una revisión simulada desde la perspectiva de Don Rogelio, se propone q
 1. El comprobante muestra el servicio, la fecha de la cita y el importe cobrado.
 2. Si la cancelación se realiza con 24 horas o más de anticipación, el comprobante muestra un cargo de $0.
 
-**Issue:** Pendiente de registrar y enlazar en GitHub.
+**Issue:** [H15 — Generar comprobante de cancelación (#19)](https://github.com/RobertoDanRam/apartalo-barberia/issues/19) 
 
 Esta historia se incorporará al Product Backlog para evaluación en un sprint posterior.
 
