@@ -45,15 +45,15 @@ Las épicas no reciben puntos definitivos porque todavía deben analizarse y des
 - **Velocidades de referencia de mi variante:** 14, 18 y 16 puntos.
 - **Operación:** (14 + 18 + 16) / 3 = 16 puntos de velocidad promedio.
 - **Carga máxima por historia:** 16 / 2 = **8 puntos**.
-- **Historias que rebasan la carga máxima:** H07 — Solicitar una cita, estimada inicialmente en 13 puntos.
+- **Historia que rebasa la carga máxima:** H07 — Solicitar una cita, estimada inicialmente en 13 puntos.
 
 | Historia original | Puntos | Subhistorias (issues) | Puntos de cada una | ¿Cómo la partí? |
-|---|---|---|---|---|
-| [H07 — Solicitar una cita (#7)](https://github.com/RobertoDanRam/apartalo-barberia/issues/7) | 13 | H07A (#17) y H07B (#18) | 5 y 8 | Separé la selección del servicio, fecha y hora de la validación y registro de la reservación. De esta forma, ambas subhistorias cumplen con la carga máxima de 8 puntos. |
+|---|---:|---|---|---|
+| [H07 — Solicitar una cita (#7)](https://github.com/RobertoDanRam/apartalo-barberia/issues/7) | 13 | [H07A — #17](https://github.com/RobertoDanRam/apartalo-barberia/issues/17) y [H07B — #18](https://github.com/RobertoDanRam/apartalo-barberia/issues/18) | 5 y 8 | Separé la selección del servicio, fecha y hora de la validación y registro de la reservación. Ambas subhistorias cumplen con la carga máxima permitida. |
 
-La historia original debe cerrarse como **dividida** después de crear y enlazar las dos subhistorias, conservando la trazabilidad de su refinamiento.
+La historia original debe permanecer cerrada con la explicación **dividida** y con enlaces a ambas subhistorias, conservando la trazabilidad del refinamiento.
 
-Las subhistorias permanecerán pendientes de desarrollo hasta que sean seleccionadas para un sprint posterior.
+Las subhistorias permanecen pendientes de desarrollo para un sprint posterior.
 
 ## 4.5 Escenarios BDD
 
@@ -71,21 +71,21 @@ Archivo: [features/02_cancelacion.feature](../features/02_cancelacion.feature)
 
 Incluye ejemplos con 24 horas, 2 horas y menos de 2 horas de anticipación, así como un escenario independiente de inasistencia.
 
-Cada escenario representa una operación de negocio y establece un resultado esperado que podrá verificarse posteriormente mediante pytest.
+Estos escenarios se transformaron en pruebas automatizadas utilizando `pytest.mark.parametrize` durante el Ejercicio 6.
 
 ## 4.6 R2 como tabla FIT
 
-La siguiente tabla define las entradas y resultados esperados antes de implementar la regla R2.
+La siguiente tabla presenta los resultados esperados definidos antes de la implementación y los resultados reales comprobados mediante pytest.
 
 | Situación (entrada) | Horas de anticipación (entrada) | Total de reserva (entrada) | Resultado esperado | Resultado real |
 |---|---:|---:|---:|---|
-| Cancelación | 48 | $200 | $0 | Pendiente |
-| Cancelación | 24 | $200 | $0 | Pendiente |
-| Cancelación | 23 | $200 | $100 | Pendiente |
-| Cancelación | 2 | $200 | $100 | Pendiente |
-| Cancelación | 1 | $200 | $200 | Pendiente |
-| Cancelación | 0 | $200 | $200 | Pendiente |
-| Inasistencia | No aplica | $200 | $200 | Pendiente |
+| Cancelación | 48 | $200 | $0 | ✅ $0 |
+| Cancelación | 24 | $200 | $0 | ✅ $0 |
+| Cancelación | 23 | $200 | $100 | ✅ $100 |
+| Cancelación | 2 | $200 | $100 | ✅ $100 |
+| Cancelación | 1 | $200 | $200 | ✅ $200 |
+| Cancelación | 0 | $200 | $200 | ✅ $200 |
+| Inasistencia | No aplica | $200 | $200 | ✅ $200 |
 
 **Interpretación:**
 
@@ -93,4 +93,16 @@ La siguiente tabla define las entradas y resultados esperados antes de implement
 - Con 2 horas o más, pero menos de 24 horas, se cobra el 50 % del servicio reservado.
 - Con menos de 2 horas o en caso de inasistencia, se cobra el 100 %.
 
-La columna `Resultado real` se completará al finalizar el Ejercicio 6, utilizando los resultados de las pruebas automatizadas. Cada fila se marcará con ✅ si coincide con el valor esperado o ❌ si se detecta una diferencia.
+**Resultados de las pruebas:**
+
+Los siete casos de la tabla FIT fueron comprobados mediante las pruebas automatizadas de R2.
+
+Se obtuvo el resultado esperado en cada caso: **7 de 7 casos aprobados (100 %)**.
+
+La ejecución completa de pytest terminó con **34 pruebas aprobadas y 0 fallidas**.
+
+**Evidencia:** [Resultados de pytest — Sprint 1](../evidencias/pytest_sprint1.txt)
+
+Adicionalmente, se comprobó el límite de exactamente 24 horas mediante una prueba de regresión. Al provocar un cambio incorrecto en el operador de comparación, la prueba detectó un cobro indebido de $100; después de corregir el código, volvió a aprobarse.
+
+La explicación y las evidencias de regresión están documentadas en [06_tdd.md](06_tdd.md).
