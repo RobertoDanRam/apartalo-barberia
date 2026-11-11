@@ -49,7 +49,7 @@ Las épicas no reciben puntos definitivos porque todavía deben analizarse y des
 
 | Historia original | Puntos | Subhistorias (issues) | Puntos de cada una | ¿Cómo la partí? |
 |---|---|---|---|---|
-| [H07 — Solicitar una cita (#7)](https://github.com/RobertoDanRam/apartalo-barberia/issues/7) | 13 | H07A (#PENDIENTE) y H07B (#PENDIENTE) | 5 y 8 | Separé la selección del servicio, fecha y hora de la validación y registro de la reservación. De esta forma, ambas subhistorias cumplen con la carga máxima de 8 puntos. |
+| [H07 — Solicitar una cita (#7)](https://github.com/RobertoDanRam/apartalo-barberia/issues/7) | 13 | H07A (#17) y H07B (#18) | 5 y 8 | Separé la selección del servicio, fecha y hora de la validación y registro de la reservación. De esta forma, ambas subhistorias cumplen con la carga máxima de 8 puntos. |
 
 La historia original debe cerrarse como **dividida** después de crear y enlazar las dos subhistorias, conservando la trazabilidad de su refinamiento.
 
