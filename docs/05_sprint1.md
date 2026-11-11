@@ -50,6 +50,7 @@ La carga máxima por historia es de 8 puntos, según el refinamiento del Ejercic
 3. El código está integrado en la rama `main` y los cambios están registrados mediante commits de Git.
 4. Todos los criterios de aceptación de la historia se cumplen.
 5. No existen defectos críticos pendientes y se conserva evidencia de los resultados obtenidos.
+6. **Robustez (RNF02):** la regla R2 debe rechazar el 100 % de los tres casos de entradas inválidas definidos, mediante `ValueError`. Esta condición se verifica con `tests/rnf/test_robustez.py` antes de dar por terminados los cálculos de cancelación.
 
 **DoD vs. criterios de aceptación (con un ejemplo de mi backlog):**
 
