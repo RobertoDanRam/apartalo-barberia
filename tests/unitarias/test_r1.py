@@ -21,3 +21,14 @@ def test_precios_base(servicio, esperado):
 ])
 def test_cliente_frecuente(servicio, visitas, esperado):
     assert reglas.calcular_total(servicio, visitas) == esperado
+
+# Verificar entradas inválidas para R1
+
+@pytest.mark.unitaria
+@pytest.mark.parametrize("servicio,visitas", [
+    ("tinte", 0),
+    ("corte", -1),
+])
+def test_r1_rechaza_datos_invalidos(servicio, visitas):
+    with pytest.raises(ValueError):
+        reglas.calcular_total(servicio, visitas)
