@@ -4,8 +4,8 @@ Repositorio de la **Evidencia 1** de *Proyecto de ingeniería de software* (Tecm
 
 | Dato | |
 |---|---|
-| Estudiante | TU NOMBRE COMPLETO |
-| Matrícula | TU MATRÍCULA |
+| Estudiante | ROBERTO DANIEL RAMOS FLORES |
+| Matrícula | T02966616 |
 | Variante | 1 — Barbería Filo |
 | Project (tablero) | [Apártalo — Barbería Filo](https://github.com/users/RobertoDanRam/projects/1/views/1) |
 
