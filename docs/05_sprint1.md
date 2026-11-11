@@ -104,11 +104,21 @@ La revisión técnica se resume en la siguiente tabla. La aceptación definitiva
 
 | Historia | ¿Cumple sus criterios? | ¿Aceptada? | Evidencia |
 |---|---|---|---|
-| [H02 — Precio combinado](https://github.com/RobertoDanRam/apartalo-barberia/issues/2) | Cálculo comprobado: corte $180 + barba $120 con 15 % de descuento = $255. | Aceptación técnica del cálculo; verificar demás criterios del Issue. | [Pruebas de R1](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/1a330c9) |
-| [H03 — Descuento frecuente](https://github.com/RobertoDanRam/apartalo-barberia/issues/3) | Se verificó que con cuatro visitas no se aplica el descuento y desde cinco se descuentan $20 adicionales. | Aceptación técnica del cálculo; verificar demás criterios del Issue. | [Pruebas de R1](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/d52c04a) |
-| [H05 — Cargo por cancelación](https://github.com/RobertoDanRam/apartalo-barberia/issues/5) | Se comprobaron los límites de 24 y 2 horas y las penalizaciones correspondientes. | Aceptación técnica del cálculo; verificar demás criterios del Issue. | [Pruebas de R2](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/8e9374c) |
-| [H06 — Registrar inasistencias](https://github.com/RobertoDanRam/apartalo-barberia/issues/6) | Se comprobó el cargo del 100 % por inasistencia. No se ha demostrado un registro persistente de la inasistencia. | Pendiente de aceptación completa si la historia exige registrar el evento. | [Prueba de inasistencia](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/8e9374c) |
+| [H02 — Precio combinado](https://github.com/RobertoDanRam/apartalo-barberia/issues/2) | Sí. El código suma $180 + $120 = $300 y aplica el 15 % de descuento, obteniendo $255. | **Sí** | [Pruebas de R1](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/1a330c9) |
+| [H03 — Cliente frecuente](https://github.com/RobertoDanRam/apartalo-barberia/issues/3) | Sí. Con cuatro visitas no hay descuento adicional; con cinco o más se descuentan $20. | **Sí** | [Pruebas de R1](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/d52c04a) |
+| [H05 — Cargo de cancelación](https://github.com/RobertoDanRam/apartalo-barberia/issues/5) | Sí. Con 24 horas o más el cargo es $0; de 2 a menos de 24 horas es 50 %, y con menos de 2 horas es 100 %. | **Sí** | [Pruebas de R2](../evidencias/pytest_sprint1.txt) · [Commit VERDE](https://github.com/RobertoDanRam/apartalo-barberia/commit/8e9374c) |
+| [H06 — Registrar inasistencias](https://github.com/RobertoDanRam/apartalo-barberia/issues/6) | Parcialmente. Se comprobó el cargo del 100 %, pero todavía no se implementó el registro de la cita como inasistencia. | **No** | [Prueba del cargo por inasistencia](../evidencias/pytest_sprint1.txt) |
 
+**Resultado de la revisión:**
+
+- Historias comprometidas: 4.
+- Historias aceptadas: 3.
+- Historias no aceptadas: 1 (H06).
+- Puntos comprometidos: 14.
+- Puntos correspondientes a historias aceptadas: 11.
+- Puntos pendientes: 3.
+
+La historia H06 permanecerá pendiente hasta implementar y probar el registro de la inasistencia. No se contabilizará como entregada.
 **Evaluación del incremento:**
 
 Las reglas de cálculo de R1 y R2 funcionan correctamente para los casos probados. Las pruebas también validan las principales condiciones límite y el rechazo de entradas inválidas.
